@@ -41,22 +41,22 @@
 
 ```
 
-## API
+### API
 
 
-### on `object.on(type, listener)`
+#### on `object.on(type, listener)`
 
 给对象添加事件回调函数。
 
-### off `object.off(type, listener)`
+#### off `object.off(type, listener)`
 
 从对象上移除事件回调函数。两个参数是可选的：当没有参数的时候移除所有回调函数，当type的时候移除该type所有回调函数，存在type和listener时，移除特定回调函数。
 
-### trigger `object.trigger(type, [*args])`
+#### trigger `object.trigger(type, [*args])`
 
 触发一个或多个事件（用空格分隔）。`*args` 参数会依次传给回调函数。
 
-### mixTo `Events.mixTo(target)`
+#### mixTo `Events.mixTo(target)`
 
 将 `Event` 的原型方法混入到指定对象或函数原型中。
 
