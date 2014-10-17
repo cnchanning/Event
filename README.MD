@@ -41,7 +41,7 @@
 
 ```
 
-## API 。
+## API
 
 
 ### on `object.on(type, listener)`
