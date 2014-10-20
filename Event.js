@@ -8,12 +8,12 @@
         module.exports=definition();
     }
     else {
-        window[name] = definition();
+        this[name] = definition();
     }
 
 }('Event', function () {
     function Event() {
-        if (!this instanceof Event) {
+        if (!(this instanceof Event)) {
             return new Event();
         }
         this._events = {}
@@ -27,18 +27,17 @@
 
     Event.prototype.off = function (type, listener) {
         if (arguments.length === 0) {
-            this._event = {};
+            this._events = {};
         } else if (arguments.length === 1) {
-            this._event[type] = [];
+            this._events[type] = [];
         } else {
-            var list = this._event[type];
+            var list = this._events[type];
             if (list) {
                 var length = list.length;
-                while (length > 0) {
-                    if (listener === list[length]) {
-                        delete list[length];
+                for (var i = 0; i < length; i++) {
+                    if (listener === list[i]) {
+                        list.splice(i,1);
                     }
-                    length--;
                 }
             }
         }
