@@ -64,12 +64,14 @@
         return this.on(type, bridge);
     };
 
-    Event.prototype.mixTo = function (target) {
+    Event.mixTo = function (target) {
         var proto = Event.prototype;
         if (isFunction(target)) {
             merge(target.prototype);
+            return new target();
         } else if (isObject(target)) {
             merge(target);
+            return target;
         }
 
         function merge(obj) {

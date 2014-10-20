@@ -122,4 +122,14 @@ describe("pagination", function() {
         expect(counter).to.be(1);
 
     });
+
+    it("混入其他函数",function(){
+        function A(){}
+        A=Event.mixTo(A);
+        expect(A.on).to.be.an(Function);
+        expect(A.trigger).to.be.an(Function);
+        expect(A.once).to.be.an(Function);
+        expect(A.off).to.be.an(Function);
+
+    });
 });
