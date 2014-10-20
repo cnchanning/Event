@@ -1,0 +1,26 @@
+{
+  "name": "event",
+  "version": "0.0.1",
+  "description": "Pub/Sub",
+  "main": "event.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cnchanning/Event.git"
+  },
+  "keywords": [
+    "event"
+  ],
+  "devDependencies":{
+      "mocha":"*",
+      "expect.js":"*"
+  },
+  "author": "cnchanning",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cnchanning/Event/issues"
+  },
+  "homepage": "https://github.com/cnchanning/Event"
+}
